@@ -16,19 +16,22 @@
         <ion-card-title class="app-registro">Registro</ion-card-title>
       </ion-card-header>
 
-      <ion-item>
-        <ion-select (ionChange)="cargarComuna()" placeholder="Seleccione región" [(ngModel)]="regionSeleccionado">
-          <ion-select-option [value]="i.id" *ngFor="let i of regiones">{{i.nombre}}</ion-select-option>
-        </ion-select>
-      </ion-item>
-
-      <ion-item>
-        <ion-select placeholder="Seleccione comuna" [(ngModel)]="comunaSeleccionada">
-          <ion-select-option [value]="i.id" *ngFor="let i of comunas">{{i.nombre}}</ion-select-option>
-        </ion-select>
-      </ion-item>
-
       <ion-card-content>
+
+        <ion-item>
+          <ion-label position="floating">Región</ion-label>
+          <ion-select (ionChange)="cargarComuna()" placeholder="Seleccione región" [(ngModel)]="regionSeleccionado">
+            <ion-select-option [value]="i.id" *ngFor="let i of regiones">{{i.nombre}}</ion-select-option>
+          </ion-select>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Comuna</ion-label>
+          <ion-select placeholder="Seleccione comuna" [(ngModel)]="comunaSeleccionada">
+            <ion-select-option [value]="i.id" *ngFor="let i of comunas">{{i.nombre}}</ion-select-option>
+          </ion-select>
+        </ion-item>
+
         <form [formGroup]="formularioRegistro" (ngSubmit)="guardar()" class="registration-form">
 
           <ion-item class="registration-input" [class.error]="formularioRegistro.get('nombre')?.invalid && formularioRegistro.get('nombre')?.touched">
