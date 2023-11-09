@@ -7,11 +7,11 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true" class="registration-page">
-
+<ion-content [fullscreen]="true" class="registration-page"> 
+<div class="container">
 <!-- HEADER LOGO DUOC -->
 <div class="img-logo-duoc">
-  <ion-img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Logo_DuocUC.svg/1067px-Logo_DuocUC.svg.png" style="height: 20vh; max-width: 250vh;">
+  <ion-img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Logo_DuocUC.svg/1067px-Logo_DuocUC.svg.png">
   </ion-img>
 </div>
 
@@ -81,9 +81,9 @@
   </div>
 
   <!-- BOTÓN REGRESAR -->  
-  <ion-col>
+
     <ion-row class="ion-justify-content-center">
-      <div class="container">
+      <div class="container-btn">
         <ion-toolbar>
           <ion-buttons slot="start" [routerLink]="['/login']">
             <ion-back-button default-href="#"></ion-back-button>Volver atrás
@@ -91,13 +91,10 @@
         </ion-toolbar>
       </div>
     </ion-row>
-  </ion-col>
 
+</div>
+  <ion-img class="img-acreditacion" src="https://www.duoc.cl/wp-content/themes/wordpress-duoc-cl/images/acreditacion.png">
+  </ion-img>
 
-
-  <ion-footer class="footer">
-      <ion-img class="img-acreditacion" src="https://www.duoc.cl/wp-content/themes/wordpress-duoc-cl/images/acreditacion.png">
-      </ion-img>
-  </ion-footer>
 
 </ion-content>
