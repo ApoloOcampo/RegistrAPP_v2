@@ -84,3 +84,38 @@ input:focus {
   margin: 20px auto; 
   display: block; 
 }
+
+.img-acreditacion{
+    height: 5vh;
+    width: 50vh;
+    background-color: rgba(254, 174, 0, 0.787);
+    justify-content: end;
+    margin: 20px auto;
+  }
+
+  .img-logo-duoc{
+    margin: 20px auto;
+    height: 15vh; 
+    max-width: 50vh;
+  }
+
+.container{
+  background: rgb(237,237,237);
+  background: -moz-linear-gradient(175deg, 
+    rgba(237,237,237,0.1517857142857143) 0%,
+    rgba(29,161,253,0.13217787114845936) 50%, 
+    rgba(249,249,249,0.15458683473389356) 93%);
+  background: -webkit-linear-gradient(175deg, 
+    rgba(237,237,237,0.1517857142857143) 0%, 
+    rgba(29,161,253,0.13217787114845936) 50%, 
+    rgba(249,249,249,0.15458683473389356) 93%);
+  background: linear-gradient(175deg, 
+    rgba(237,237,237,0.1517857142857143) 0%, 
+    rgba(29,161,253,0.13217787114845936) 50%, 
+    rgba(249,249,249,0.15458683473389356) 93%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ededed",endColorstr="#f9f9f9",GradientType=1);
+}
+
+.ion-justify-content-center{
+  background-color: #ffffff27;
+}
