@@ -73,95 +73,105 @@ export class RegistroPage {
     const usuariosJSON = await Preferences.get({ key:'usuarios'});
     const usuarios = usuariosJSON && usuariosJSON.value ? JSON.parse(usuariosJSON.value) : [];
 
-    if (this.usuarioExiste(usuarios, f.usuario)) {
-      await this.mostrarAlerta('Usuario existente', 'El usuario ya existe. Por favor, elige otro nombre de usuario.');
-      return;
-    }
-
-    // Validación de 'nombre'
-    if (!f.nombre) {
-      await this.mostrarAlerta('Nombre requerido', 'Debes ingresar un nombre de usuario.');
-      return;
-    }
-
-    if (/^[0-9]*$/.test(f.nombre)) {
-      await this.mostrarAlerta('Nombre incorrecto', 'El nombre no debe contener numeros.');
-      return;
-    }
-
-    if (f.nombre.length < 3 || f.nombre.length > 20) {
-      await this.mostrarAlerta('Nombre incorrecto', 'El nombre debe tener entre 3 y 20 caracteres.');
-      return;
-    }    
-
-    // Validación de 'apellido'
-    if (!f.apellido) {
-      await this.mostrarAlerta('Apellido requerido', 'Debes ingresar un apellido.');
-      return;
-    }
-
-    if (/^[0-9]*$/.test(f.apellido)) {
-      await this.mostrarAlerta('Apellido incorrecto', 'El apellido no debe contener numeros.');
-      return;
-    }
-
-    if (f.apellido.length < 3 || f.apellido.length > 20) {
-      await this.mostrarAlerta('Apellido incorrecto', 'El apellido debe tener entre 3 y 20 caracteres.');
-      return;
-    }
-
-    // Validación de 'rut'
-    if (!f.rut) {
-      await this.mostrarAlerta('RUT requerido', 'Debes ingresar un RUT.');
-      return;
-    }
-
-    if (!/^\d{9}$/.test(f.rut)) {
-      await this.mostrarAlerta('RUT incorrecto', 'El RUT debe contener exactamente 9 dígitos numéricos.');
-      return;
-    }
-
-    // Validación de 'usuario'
-    if (!f.usuario) {
-      await this.mostrarAlerta('Usuario requerido', 'Debes ingresar un nombre de usuario.');
-      return;
-    }
-
-    if (f.usuario.length < 3 || f.usuario.length > 8) {
-      await this.mostrarAlerta('Usuario incorrecto', 'El usuario debe tener entre 3 y 8 caracteres.');
-      return;
-    }
-
-    // Validación de 'password'
-    if (!f.password) {
-      await this.mostrarAlerta('Contraseña requerida', 'Debes ingresar una contraseña.');
-      return;
-    }
-
-    if (!/^\d{4}$/.test(f.password)) {
-      await this.mostrarAlerta('Contraseña incorrecta', 'La contraseña debe tener exactamente 4 números.');
-      return;
-    }
-
-    // Validación de 'confirmacionPassword'
-    if (!/^\d{4}$/.test(f.confirmacionPassword)) {
-      await this.mostrarAlerta('Confirmación de contraseña incorrecta', 'La confirmación de contraseña debe contener exactamente 4 números.');
-      return;
-    }
-
-    // validacion para que las contraseñas coicidan
-    if (f.password !== f.confirmacionPassword) {
-      await this.mostrarAlerta('Contraseñas no coinciden', 'Las contraseñas no coinciden. Por favor, inténtalo de nuevo.');
-      return;
-    }
-
+    // Validación ingreso de región
     if (!this.regionSeleccionado) {
       await this.mostrarAlerta('Región requerida', 'Debes seleccionar una región.');
       return;
     }
   
+    // Validación ingreso de comuna
     if (!this.comunaSeleccionada) {
       await this.mostrarAlerta('Comuna requerida', 'Debes seleccionar una comuna.');
+      return;
+    }
+
+    // Validación de usuario existente
+    if (this.usuarioExiste(usuarios, f.usuario)) {
+      await this.mostrarAlerta('Usuario existente', 'El usuario ya existe. Por favor, elige otro nombre de usuario.');
+      return;
+    }
+
+    // Validación de nombre campo vacío
+    if (!f.nombre) {
+      await this.mostrarAlerta('Nombre requerido', 'Debes ingresar un nombre de usuario.');
+      return;
+    }
+
+    // Validación nombre sin números
+    if (/^[0-9]*$/.test(f.nombre)) {
+      await this.mostrarAlerta('Nombre incorrecto', 'El nombre no debe contener numeros.');
+      return;
+    }
+
+    // Validación nombre mínimo y máximo caracteres
+    if (f.nombre.length < 3 || f.nombre.length > 20) {
+      await this.mostrarAlerta('Nombre incorrecto', 'El nombre debe tener entre 3 y 20 caracteres.');
+      return;
+    }    
+
+    // Validación de apellido campo vacío
+    if (!f.apellido) {
+      await this.mostrarAlerta('Apellido requerido', 'Debes ingresar un apellido.');
+      return;
+    }
+
+    // Validación apellido sin números
+    if (/^[0-9]*$/.test(f.apellido)) {
+      await this.mostrarAlerta('Apellido incorrecto', 'El apellido no debe contener numeros.');
+      return;
+    }
+
+    // Validación apellido mínimo y máximo caracteres    
+    if (f.apellido.length < 3 || f.apellido.length > 20) {
+      await this.mostrarAlerta('Apellido incorrecto', 'El apellido debe tener entre 3 y 20 caracteres.');
+      return;
+    }
+
+    // Validación rut campo vacío
+    if (!f.rut) {
+      await this.mostrarAlerta('RUT requerido', 'Debes ingresar un RUT.');
+      return;
+    }
+
+    // Validación rut con largo de 9 dígitos
+    if (!/^\d{9}$/.test(f.rut)) {
+      await this.mostrarAlerta('RUT incorrecto', 'El RUT debe contener exactamente 9 dígitos numéricos.');
+      return;
+    }
+
+    // Validación usuario campo vacío
+    if (!f.usuario) {
+      await this.mostrarAlerta('Usuario requerido', 'Debes ingresar un nombre de usuario.');
+      return;
+    }
+
+    // Validación usuario mínimo y máximo caracteres    
+    if (f.usuario.length < 3 || f.usuario.length > 8) {
+      await this.mostrarAlerta('Usuario incorrecto', 'El usuario debe tener entre 3 y 8 caracteres.');
+      return;
+    }
+
+    // Validación password campo vacío
+    if (!f.password) {
+      await this.mostrarAlerta('Contraseña requerida', 'Debes ingresar una contraseña.');
+      return;
+    }
+
+    // Validación password 4 dígitos
+    if (!/^\d{4}$/.test(f.password)) {
+      await this.mostrarAlerta('Contraseña incorrecta', 'La contraseña debe tener exactamente 4 números.');
+      return;
+    }
+
+    // Validación confirmación password campo vacío
+    if (!/^\d{4}$/.test(f.confirmacionPassword)) {
+      await this.mostrarAlerta('Confirmación de contraseña incorrecta', 'La confirmación de contraseña debe contener exactamente 4 números.');
+      return;
+    }
+
+    // validacion para que las password coicidan
+    if (f.password !== f.confirmacionPassword) {
+      await this.mostrarAlerta('Contraseñas no coinciden', 'Las contraseñas no coinciden. Por favor, inténtalo de nuevo.');
       return;
     }
 

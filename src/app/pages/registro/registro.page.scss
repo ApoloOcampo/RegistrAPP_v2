@@ -1,7 +1,7 @@
 
 .app-title {
     text-align: center;
-    color: #777;
+    color: #000000;
   }
   .registration-page {
     background-color: #FFF;
@@ -12,13 +12,12 @@
     height: 100vh; /* Ocupa el 100% de la altura de la ventana */
   }
   .app-registro {
-    text-align: left; /* Cambia la alineación del texto a la izquierda */
+    text-align: center; /* Cambia la alineación del texto a la izquierda */
   }
   .registration-container {
     margin: 0 auto;
     max-width: 300px;
   }
-  
   
   .registration-button {
     color: #ffffff;
@@ -33,8 +32,21 @@
     display: block;
     width: 100%;
   }
+
   .registration-card {
     border-radius: 5px;
     width: 310px; /* Aumenta el ancho según tus necesidades */
     margin: 20px auto; /* Centra horizontalmente */
+  }
+
+  .img-acreditacion{
+    height: 5vh; 
+    max-width: auto; 
+    background-color: rgba(254, 174, 0, 0.787);
+    justify-content: end;
+  }
+
+  .img-logo-duoc{
+    justify-content: start;
+    height: 19vh;
   }
