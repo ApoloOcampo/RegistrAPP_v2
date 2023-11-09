@@ -8,36 +8,38 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
+<div class="container">
   <!-- HEADER LOGO DUOC -->
-<div class="img-logo-duoc">
-  <ion-img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Logo_DuocUC.svg/1067px-Logo_DuocUC.svg.png">
+  <div class="img-logo-duoc">
+    <ion-img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Logo_DuocUC.svg/1067px-Logo_DuocUC.svg.png">
+    </ion-img>
+  </div>
+  <!-- Recuperar contraseña-->
+    <ion-card class="card">
+      <ion-card-content class = "ion-text-center">
+        <ion-item class ="ion-margin">
+          <ion-label position="floating">Ingrese su nombre de usuario:</ion-label>
+          <ion-input maxlength="8" minlength="3" type="text" [(ngModel)]="nombreUsuarioInput"></ion-input>
+          <ion-label position="floating">Ingrese su rut:</ion-label>
+          <ion-input maxlength="9" type="text" [(ngModel)]="rutUsuarioInput"></ion-input>
+        </ion-item>  
+        <ion-button shape="round" expand="full" (click)="buscarContrasena()" class="ion-margin-top">Recuperar contraseña</ion-button>
+        <ion-label>{{ resultadoContrasena }}</ion-label>
+      </ion-card-content>
+    </ion-card>
+
+    <!-- BOTÓN REGRESAR -->  
+
+    <ion-row class="ion-justify-content-center">
+      <div class="container-btn">
+        <ion-toolbar>
+          <ion-buttons slot="start" [routerLink]="['/login']">
+            <ion-back-button default-href="#"></ion-back-button>Volver atrás
+          </ion-buttons>
+        </ion-toolbar>
+      </div>
+    </ion-row>
+  <ion-img class="img-acreditacion" src="https://www.duoc.cl/wp-content/themes/wordpress-duoc-cl/images/acreditacion.png">
   </ion-img>
 </div>
-<!-- Recuperar contraseña-->
-  <ion-card class="card">
-    <ion-card-content class = "ion-text-center">
-      <ion-item class ="ion-margin">
-        <ion-label position="floating">Ingrese su nombre de usuario:</ion-label>
-        <ion-input maxlength="8" minlength="3" type="text" [(ngModel)]="nombreUsuarioInput"></ion-input>
-        <ion-label position="floating">Ingrese su rut:</ion-label>
-        <ion-input maxlength="9" type="text" [(ngModel)]="rutUsuarioInput"></ion-input>
-      </ion-item>  
-      <ion-button expand="full" (click)="buscarContrasena()" class="ion-margin-top">Recuperar contraseña</ion-button>
-      <ion-label>{{ resultadoContrasena }}</ion-label>
-    </ion-card-content>
-  </ion-card>
-
-  <!-- BOTÓN REGRESAR -->  
-
-  <ion-row class="ion-justify-content-center">
-    <div class="container-btn">
-      <ion-toolbar>
-        <ion-buttons slot="start" [routerLink]="['/login']">
-          <ion-back-button default-href="#"></ion-back-button>Volver atrás
-        </ion-buttons>
-      </ion-toolbar>
-    </div>
-  </ion-row>
-<ion-img class="img-acreditacion" src="https://www.duoc.cl/wp-content/themes/wordpress-duoc-cl/images/acreditacion.png">
-</ion-img>
 </ion-content>
