@@ -7,13 +7,19 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true" class="registration-page">
+<ion-content [fullscreen]="true" class="registration-page"> 
+<div class="container">
+<!-- HEADER LOGO DUOC -->
+<div class="img-logo-duoc">
+  <ion-img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Logo_DuocUC.svg/1067px-Logo_DuocUC.svg.png">
+  </ion-img>
+</div>
 
 
   <div class="registration-container">
     <ion-card class="registration-card">
       <ion-card-header class="registration-header">
-        <ion-card-title class="app-registro">Registro</ion-card-title>
+        <ion-card-title class="app-registro">Formulario Registro</ion-card-title>
       </ion-card-header>
 
       <ion-card-content>
@@ -73,4 +79,22 @@
     </ion-card>
 
   </div>
+
+  <!-- BOTÓN REGRESAR -->  
+
+    <ion-row class="ion-justify-content-center">
+      <div class="container-btn">
+        <ion-toolbar>
+          <ion-buttons slot="start" [routerLink]="['/login']">
+            <ion-back-button default-href="#"></ion-back-button>Volver atrás
+          </ion-buttons>
+        </ion-toolbar>
+      </div>
+    </ion-row>
+
+</div>
+  <ion-img class="img-acreditacion" src="https://www.duoc.cl/wp-content/themes/wordpress-duoc-cl/images/acreditacion.png">
+  </ion-img>
+
+
 </ion-content>
