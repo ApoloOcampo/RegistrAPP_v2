@@ -2,12 +2,18 @@
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
-      <ion-title>Recuperar Contraseña</ion-title>
+      <ion-title class="app-title">Recuperar Contraseña</ion-title>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
+  <!-- HEADER LOGO DUOC -->
+<div class="img-logo-duoc">
+  <ion-img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Logo_DuocUC.svg/1067px-Logo_DuocUC.svg.png">
+  </ion-img>
+</div>
+<!-- Recuperar contraseña-->
   <ion-card class="card">
     <ion-card-content class = "ion-text-center">
       <ion-item class ="ion-margin">
@@ -20,4 +26,18 @@
       <ion-label>{{ resultadoContrasena }}</ion-label>
     </ion-card-content>
   </ion-card>
+
+  <!-- BOTÓN REGRESAR -->  
+
+  <ion-row class="ion-justify-content-center">
+    <div class="container-btn">
+      <ion-toolbar>
+        <ion-buttons slot="start" [routerLink]="['/login']">
+          <ion-back-button default-href="#"></ion-back-button>Volver atrás
+        </ion-buttons>
+      </ion-toolbar>
+    </div>
+  </ion-row>
+<ion-img class="img-acreditacion" src="https://www.duoc.cl/wp-content/themes/wordpress-duoc-cl/images/acreditacion.png">
+</ion-img>
 </ion-content>
