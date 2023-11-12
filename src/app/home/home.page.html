@@ -1,19 +1,25 @@
+
 <ion-header [translucent]="true">
   <ion-toolbar>
-       <ion-buttons slot="start">
-         <ion-back-button></ion-back-button>
-       </ion-buttons>
-       <h1>Home</h1>
+       <h1>Inicio</h1>
+
     <ion-label class="custom-center">Bienvenido, {{ nombreUsuario }}</ion-label>
+
+  
   </ion-toolbar>
  </ion-header>
  <ion-content [fullscreen]="true" class="login-page">
-  <ion-card>
-    <ion-img class="logo-qr" src="https://www.techopedia.com/wp-content/uploads/2023/03/aee977ce-f946-4451-8b9e-bba278ba5f13.png"class="logo" alt="Descripción de la imagen">
+      <!-- HEADER LOGO DUOC -->
+      <div class="img-logo-duoc">
+        <ion-img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Logo_DuocUC.svg/1067px-Logo_DuocUC.svg.png">
+        </ion-img>
+      </div>
+  <ion-card class="fondo-qr" >
+    <div class="imagen-qr">
+    <ion-img class="logo-qr" src="https://torreperogil.es/wp-content/uploads/2020/07/frame-1.png"class="logo" alt="Descripción de la imagen">
     </ion-img>
+    </div>
        <div class="qr-container">
-
- 
          <div class="message">
            Escanea el código QR
          </div>
@@ -23,5 +29,8 @@
            </zxing-scanner>
          </div>
        </div>
-  </ion-card>
+  </ion-card><div class="footer">
+    <ion-img class="img-acreditacion" src="https://www.duoc.cl/wp-content/themes/wordpress-duoc-cl/images/acreditacion.png">
+    </ion-img>
+  </div>
  </ion-content>
