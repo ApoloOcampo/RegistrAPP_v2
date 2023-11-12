@@ -29,6 +29,10 @@ const routes: Routes = [
     path: '**',
     loadChildren: () => import('./pages/e404/e404.module').then( m => m.E404PageModule)
   },
+  {
+    path: 'clase-registrada',
+    loadChildren: () => import('./pages/clase-registrada/clase-registrada.module').then( m => m.ClaseRegistradaPageModule)
+  },
 
 ];
 
