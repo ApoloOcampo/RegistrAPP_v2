@@ -1,27 +1,36 @@
-#container {
-  text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+.fondo-qr{
+  background: rgb(237,237,237);
+  background: -moz-linear-gradient(175deg, 
+    rgba(237,237,237,0.1517857142857143) 0%,
+    rgba(29,161,253,0.13217787114845936) 50%, 
+    rgba(249,249,249,0.15458683473389356) 93%);
+  background: -webkit-linear-gradient(175deg, 
+    rgba(237,237,237,0.1517857142857143) 0%, 
+    rgba(29,161,253,0.13217787114845936) 50%, 
+    rgba(249,249,249,0.15458683473389356) 93%);
+  background: linear-gradient(175deg, 
+    rgba(237,237,237,0.1517857142857143) 0%, 
+    rgba(29,161,253,0.13217787114845936) 50%, 
+    rgba(249,249,249,0.15458683473389356) 93%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ededed",endColorstr="#f9f9f9",GradientType=1);
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+.qr-container{
+  margin: 100px auto;
+  width: 350px;
+  height: 350px;
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
+.imagen-qr{
+  margin: 60px auto;
+  width: 150px;
+  height: 150px;
 }
 
-#container a {
-  text-decoration: none;
+.img-acreditacion{
+  height: 5vh;
+  width: 50vh;
+  background-color: rgba(254, 174, 0, 0.787);
+  justify-content: end;
+  margin: 20px auto;
 }
