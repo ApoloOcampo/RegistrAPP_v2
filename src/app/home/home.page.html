@@ -2,10 +2,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
        <h1>Inicio</h1>
-
     <ion-label class="custom-center">Bienvenido, {{ nombreUsuario }}</ion-label>
-
-  
   </ion-toolbar>
  </ion-header>
  <ion-content [fullscreen]="true" class="login-page">
@@ -29,8 +26,16 @@
            </zxing-scanner>
          </div>
        </div>
-  </ion-card><div class="footer">
-    <ion-img class="img-acreditacion" src="https://www.duoc.cl/wp-content/themes/wordpress-duoc-cl/images/acreditacion.png">
-    </ion-img>
-  </div>
+  </ion-card>
+  <ion-row class="ion-justify-content-center">
+    <div class="container-btn">
+      <ion-toolbar>
+        <ion-buttons slot="start" [routerLink]="['/login']">
+          <ion-back-button default-href="#"></ion-back-button>Volver atrás
+        </ion-buttons>
+      </ion-toolbar>
+    </div>
+  </ion-row>
+  <ion-img class="img-acreditacion" src="https://www.duoc.cl/wp-content/themes/wordpress-duoc-cl/images/acreditacion.png">
+  </ion-img>  
  </ion-content>

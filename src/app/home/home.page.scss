@@ -17,12 +17,20 @@
 
 .qr-container{
   margin: 100px auto;
-  width: 300px;
-  height: 300px;
+  width: 350px;
+  height: 350px;
 }
 
 .imagen-qr{
   margin: 60px auto;
   width: 150px;
   height: 150px;
+}
+
+.img-acreditacion{
+  height: 5vh;
+  width: 50vh;
+  background-color: rgba(254, 174, 0, 0.787);
+  justify-content: end;
+  margin: 20px auto;
 }
