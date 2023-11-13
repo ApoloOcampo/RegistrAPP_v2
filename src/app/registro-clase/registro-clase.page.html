@@ -1,0 +1,69 @@
+<ion-header [translucent]="true" class="custom-header">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+      <ion-title class="app-title">Registro Clase</ion-title>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+      <!-- HEADER LOGO DUOC -->
+      <div class="img-logo-duoc">
+        <ion-img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Logo_DuocUC.svg/1067px-Logo_DuocUC.svg.png">
+        </ion-img>
+      </div> 
+  <div class="container">
+    <div class="row">
+  <ion-card>
+    <ion-card-header>
+      <ion-title>Datos clase</ion-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p [innerHTML]="mensajeDesdePreferences"></p>
+      <p *ngIf="latitude !== undefined && longitude !== undefined">
+        Latitud: {{ latitude }}, Longitud: {{ longitude }}
+      </p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-title>Alumno</ion-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item *ngFor="let usuario of usuarios">
+          <ion-label>
+            <strong>RUT:</strong> {{ usuario.rut }} <br>
+            <strong>Nombre:</strong> {{ usuario.nombre }} <br>
+            <strong>Apellido:</strong> {{ usuario.apellido }} <br>
+            <strong>Usuario:</strong> {{ usuario.usuario }} <br>
+            
+            
+            
+            <!-- Muestra la región si está presente -->
+            <ng-container *ngIf="usuario.region">
+              <strong>Región:</strong> {{ usuario.region.nombre }}<br>
+            </ng-container>
+        
+            <!-- Muestra la comuna si está presente -->
+            <ng-container *ngIf="usuario.comuna">
+              <strong>Comuna:</strong> {{ usuario.comuna.nombre }}<br>
+            </ng-container>
+
+            <strong>La hora:</strong> {{ horaDesdePreferences }}<br>
+
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</div>
+</div>
+<ion-img class="img-acreditacion" src="https://www.duoc.cl/wp-content/themes/wordpress-duoc-cl/images/acreditacion.png">
+</ion-img>
+</ion-content>
+
+
+
