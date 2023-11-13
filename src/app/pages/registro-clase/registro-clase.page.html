@@ -8,24 +8,23 @@
 </ion-header>
 
 <ion-content>
-      <!-- HEADER LOGO DUOC -->
-      <div class="img-logo-duoc">
-        <ion-img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Logo_DuocUC.svg/1067px-Logo_DuocUC.svg.png">
-        </ion-img>
-      </div> 
   <div class="container">
+    <div class="img-logo-duoc">
+      <ion-img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Logo_DuocUC.svg/1067px-Logo_DuocUC.svg.png">
+      </ion-img>
+    </div> 
     <div class="row">
-  <ion-card>
-    <ion-card-header>
-      <ion-title>Datos clase</ion-title>
-    </ion-card-header>
-    <ion-card-content>
-      <p [innerHTML]="mensajeDesdePreferences"></p>
-      <p *ngIf="latitude !== undefined && longitude !== undefined">
-        Latitud: {{ latitude }}, Longitud: {{ longitude }}
-      </p>
-    </ion-card-content>
-  </ion-card>
+      <ion-card>
+        <ion-card-header>
+          <ion-title>Datos clase</ion-title>
+        </ion-card-header>
+        <ion-card-content>
+          <p [innerHTML]="mensajeDesdePreferences"></p>
+          <p *ngIf="latitude !== undefined && longitude !== undefined">
+            Latitud: {{ latitude }}, Longitud: {{ longitude }}
+          </p>
+        </ion-card-content>
+      </ion-card>
 
   <ion-card>
     <ion-card-header>
@@ -59,8 +58,9 @@
       </ion-list>
     </ion-card-content>
   </ion-card>
+  </div>
 </div>
-</div>
+
 <ion-img class="img-acreditacion" src="https://www.duoc.cl/wp-content/themes/wordpress-duoc-cl/images/acreditacion.png">
 </ion-img>
 </ion-content>

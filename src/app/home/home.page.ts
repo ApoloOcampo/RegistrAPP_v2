@@ -121,7 +121,7 @@ export class HomePage implements AfterViewInit {
       
       Preferences.set({ key: 'hora', value: horaActual });
   
-      this.router.navigate(['/clase-registrada']);
+      this.router.navigate(['/registro-clase']);
     }
   }
   
