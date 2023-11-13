@@ -23,9 +23,8 @@ const routes: Routes = [
   },
   {
     path: 'registro-clase',
-    loadChildren: () => import('./registro-clase/registro-clase.module').then( m => m.RegistroClasePageModule),
+    loadChildren: () => import('./pages/registro-clase/registro-clase.module').then( m => m.RegistroClasePageModule),
     canActivate: [AuthGuard]
-
   },
   {
     path: 'recuperar-contrasena',

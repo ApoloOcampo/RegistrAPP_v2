@@ -39,16 +39,17 @@
           Ingresar
         </ion-button>
         <ion-buttons class="register-button" slot="end"
-          style="display: flex; justify-content: space-between; width: 100%;">
-          <ion-button [routerLink]="['/registro']" size="small" fill="clear" color="primary">Registrarse</ion-button>
-          <ion-button [routerLink]="['/recuperar-contrasena']" size="small" fill="clear" color="primary">Recuperar Contraseña</ion-button>
+          style="display: flex; justify-content: center; width: 100%;">
+          <ion-button [routerLink]="['/registro']" size="small" class="btns-login" fill="clear" color="primary">Registrarse</ion-button>
+          <ion-button [routerLink]="['/recuperar-contrasena']" class="btns-login" size="small" fill="clear" color="primary">Recuperar Contraseña</ion-button>
         </ion-buttons>
       </ion-card-content>
     </ion-card>
   </div>
+  
+  <ion-img class="img-acreditacion" src="https://www.duoc.cl/wp-content/themes/wordpress-duoc-cl/images/acreditacion.png">
+  </ion-img>
 
 </div>
-<ion-img class="img-acreditacion" src="https://www.duoc.cl/wp-content/themes/wordpress-duoc-cl/images/acreditacion.png">
-</ion-img>
 
 </ion-content>
