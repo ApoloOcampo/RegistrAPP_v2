@@ -29,7 +29,7 @@ export class RecuperarContrasenaPage implements OnInit {
       this.resultadoContrasena = 'Contraseña encontrada:' + contrasenaEncontrada.password;
 
     }else{
-      this.resultadoContrasena = 'nombre de usuario no encontrado';
+      this.resultadoContrasena = 'Datos ingresados son incorrectos ';
     }
   }
 
