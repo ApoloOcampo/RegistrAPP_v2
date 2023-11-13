@@ -67,6 +67,7 @@ input:focus {
 }
 
 .login-card {
+  background-color: rgba(182, 115, 8, 0.073);
   border-radius: 5px;
   width: 340px; 
   margin: 20px auto; 
@@ -118,4 +119,11 @@ input:focus {
 
 .ion-justify-content-center{
   background-color: #ffffff27;
+}
+
+.btns-login{
+  padding: 10px;
+  font-weight: 20px;
+  font-size: 11px;
+  margin: 10px auto;
 }
