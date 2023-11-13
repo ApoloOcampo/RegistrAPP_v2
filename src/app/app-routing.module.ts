@@ -22,6 +22,12 @@ const routes: Routes = [
     loadChildren: () => import('./pages/registro/registro.module').then( m => m.RegistroPageModule)
   },
   {
+    path: 'registro-clase',
+    loadChildren: () => import('./registro-clase/registro-clase.module').then( m => m.RegistroClasePageModule),
+    canActivate: [AuthGuard]
+
+  },
+  {
     path: 'recuperar-contrasena',
     loadChildren: () => import('./pages/recuperar-contrasena/recuperar-contrasena.module').then( m => m.RecuperarContrasenaPageModule)
   },
