@@ -23,9 +23,8 @@ const routes: Routes = [
   },
   {
     path: 'registro-clase',
-    loadChildren: () => import('./registro-clase/registro-clase.module').then( m => m.RegistroClasePageModule),
+    loadChildren: () => import('./pages/registro-clase/registro-clase.module').then( m => m.RegistroClasePageModule),
     canActivate: [AuthGuard]
-
   },
   {
     path: 'recuperar-contrasena',
@@ -34,10 +33,6 @@ const routes: Routes = [
   {
     path: '**',
     loadChildren: () => import('./pages/e404/e404.module').then( m => m.E404PageModule)
-  },
-  {
-    path: 'clase-registrada',
-    loadChildren: () => import('./pages/clase-registrada/clase-registrada.module').then( m => m.ClaseRegistradaPageModule)
   },
 
 ];
