@@ -1,0 +1,51 @@
+.app-title {
+    text-align: center;
+    color: #777;
+  }
+
+.custom-header {
+    background-color: #333; 
+    color: #fff; 
+  }
+  
+  .custom-card {
+    background-color: #f4f4f4;
+    margin: 16px;
+  }
+  
+  .custom-card-title {
+    color: #333; 
+  }
+  
+  ion-label {
+    color: #666;
+  }
+  
+  .container {
+
+    background: rgb(237,237,237);
+    background: -moz-linear-gradient(175deg, 
+      rgba(237,237,237,0.1517857142857143) 0%,
+      rgba(29,161,253,0.13217787114845936) 50%, 
+      rgba(249,249,249,0.15458683473389356) 93%);
+    background: -webkit-linear-gradient(175deg, 
+      rgba(237,237,237,0.1517857142857143) 0%, 
+      rgba(29,161,253,0.13217787114845936) 50%, 
+      rgba(249,249,249,0.15458683473389356) 93%);
+    background: linear-gradient(175deg, 
+      rgba(237,237,237,0.1517857142857143) 0%, 
+      rgba(29,161,253,0.13217787114845936) 50%, 
+      rgba(249,249,249,0.15458683473389356) 93%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ededed",endColorstr="#f9f9f9",GradientType=1);
+
+  }
+
+  .img-acreditacion{
+    height: 5vh;
+    width: 50vh;
+    background-color: rgba(254, 174, 0, 0.787);
+    justify-content: end;
+    margin: 10px auto;
+  }
+  
+  
