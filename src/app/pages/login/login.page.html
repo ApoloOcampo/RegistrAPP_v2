@@ -34,15 +34,14 @@
             </ion-note>
           </ion-item>
         </form>
-        <ion-button (click)="ingresar()" class="btn btn-primary btn-large btn-block login-button" expand="full"
+        <ion-button (click)="ingresar()" class="ion-margin-top" expand="full"
           shape="round" fill="solid" color="primary">
           Ingresar
         </ion-button>
         <ion-buttons class="register-button" slot="end"
           style="display: flex; justify-content: space-between; width: 100%;">
           <ion-button [routerLink]="['/registro']" size="small" fill="clear" color="primary">Registrarse</ion-button>
-          <ion-button [routerLink]="['/recuperar-contrasena']" size="small" fill="clear" color="primary">Recuperar
-            Contraseña</ion-button>
+          <ion-button [routerLink]="['/recuperar-contrasena']" size="small" fill="clear" color="primary">Recuperar Contraseña</ion-button>
         </ion-buttons>
       </ion-card-content>
     </ion-card>
