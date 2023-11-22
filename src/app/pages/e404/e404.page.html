@@ -10,6 +10,19 @@
       <ion-title size="large">ERROR 404.</ion-title>
     </ion-toolbar>
   </ion-header>
+
   <ion-img class="img-error404" src="https://media.tenor.com/lnoSi0RlMhAAAAAd/smelly-monkey-faint.gif">
 </ion-img>
+
+<!-- BOTÓN REGRESAR -->  
+<ion-row class="ion-justify-content-center">
+  <div class="container-btn">
+    <ion-toolbar>
+      <ion-buttons slot="start" [routerLink]="['/login']">
+        <ion-back-button default-href="#"></ion-back-button>Volver atrás
+      </ion-buttons>
+    </ion-toolbar>
+  </div>
+</ion-row>
+
 </ion-content>
